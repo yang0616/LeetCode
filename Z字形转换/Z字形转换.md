@@ -3,7 +3,7 @@
 
 比如输入字符串为 "LEETCODEISHIRING" 行数为 3 时，排列如下（.代表空格）：
 
-./picture/Z字形转换1.png
+./Z字形转换1.png
 
 之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比如："LCIRETOESIIGEDHN"。
 
@@ -24,7 +24,7 @@ string convert(string s, int numRows);
 > 输出: "LDREOEIIECIHNTSG"
 
 解释:
-./picture/Z字形转换2.png
+./Z字形转换2.png
 ## 代码演示 ##
 	//方法一
 	string convert1(string s, int numRows)
