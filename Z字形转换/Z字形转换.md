@@ -1,9 +1,9 @@
 ## Z字形变换 ##
 将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。
 
-比如输入字符串为 "LEETCODEISHIRING" 行数为 3 时，排列如下（.代表空格）：
+比如输入字符串为 "LEETCODEISHIRING" 行数为 3 时，排列如下：
 
-./picture/Z字形转换1.png
+./Z字形转换1.PNG
 
 之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比如："LCIRETOESIIGEDHN"。
 
@@ -24,7 +24,7 @@ string convert(string s, int numRows);
 > 输出: "LDREOEIIECIHNTSG"
 
 解释:
-./picture/Z字形转换2.png
+./Z字形转换2.PNG
 ## 代码演示 ##
 	//方法一
 	string convert1(string s, int numRows)
