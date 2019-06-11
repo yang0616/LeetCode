@@ -1,0 +1,70 @@
+十五进制
+题目描述：输入一个十进制整数，将这个数转化成对应的十五进制数（在十五进制中，A表示10，B表示11，C表示12，D表示13，E表示14），请写出转换程序。
+例如：235表示为10A；请编写流程图，并用熟悉的计算机语言编写相应的程序！
+
+代码演示：
+    #include <iostream>
+    #include <vector>
+    #include <stack>
+    #include <queue>
+    #include <iterator>
+    #include <time.h>
+    #include <string>
+    #include <math.h>
+    #include <utility>
+    #include <algorithm>
+    using namespace std;
+
+    void deal(string& ans_str, int remainder)
+    {
+      char arr[5];
+      auto it = ans_str.begin();
+      if (remainder < 10)
+      {
+        sprintf_s(arr, "%d", remainder);
+        ans_str.insert(it, arr[0]);
+        return;
+      }
+
+      char brr[] = "ABCDE";
+      for (int i = 10; i < 15; i++)
+      {
+        if (remainder == i)
+        {
+          ans_str.insert(it, brr[i % 10]);
+          break;
+        }			
+      }	
+    }
+
+    void transform(long long value)
+    {
+      string ans_str;
+      if (value == 0)
+      {
+        cout << "0" << endl;
+        return;
+      }
+
+      while (value)
+      {
+        int remainder = value % 15;
+        deal(ans_str, remainder);
+        value /= 15;
+      }
+
+      copy(ans_str.begin(), ans_str.end(), ostream_iterator<char>(cout));
+      cout << endl;
+    }
+
+    int main()
+    {
+      while (1)
+      {
+        long long tmp;  
+        cin >>tmp;
+        transform(tmp);
+      }	
+      return 0;
+    }
+
